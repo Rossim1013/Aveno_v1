@@ -5,10 +5,12 @@ This repository contains a simple prototype for **Avero**, an AI‑assisted anal
 ## Features
 
 * **Multiple sample datasets** – The prototype ships with three example data sets (`therapist`, `spa`, and `roofing`) that demonstrate how different types of businesses might use the dashboard.
-* **Dashboard view** – A simple Streamlit dashboard displays aggregate metrics (revenue, bookings, expenses and client count) and line charts for each data set.
-* **Dataset selector** – Users can choose which sample data set to explore.
-* **Drill‑down details** – A table shows the underlying records so users can verify where each KPI comes from.
-* **AI insights placeholder** – There is a text input box where users can ask questions about the data.  In this prototype the AI response is a generated summary of the selected data using basic statistics; it can easily be replaced with an actual call to OpenAI or another LLM once an API key is provided.
+* **Dashboard view** – A responsive dashboard displays aggregate metrics (revenue, bookings, expenses and client count) and line charts for each metric.  It looks great on tablets and desktops and is perfect for field demos.
+* **Dataset selector** – Users can choose which sample data set to explore via a sidebar dropdown.
+* **Scheduling** – A dedicated Scheduling tab lets you enter appointments (date, time, description and assignee).  Appointments are listed in a table so you can see upcoming commitments.
+* **Task board** – The Task Board tab allows you to create tasks with estimated and actual start/finish dates.  Tasks can be assigned to team members and marked complete via a checkbox.
+* **Drill‑down details** – The dashboard includes a data table so users can verify where each KPI comes from.
+* **AI insights placeholder** – An AI Assistant tab contains a text input box where users can ask questions about the data.  In this prototype the AI response is a generated summary of the selected data; you can easily replace it with an actual call to OpenAI or another LLM once an API key is provided.  Voice input and audio output are on the roadmap.
 
 ## Getting Started
 
@@ -31,6 +33,7 @@ This repository contains a simple prototype for **Avero**, an AI‑assisted anal
 ```
 avero_prototype/
 ├── app.py             # Streamlit application
+├── avero_logo.png      # Logo used in the header (referenced by app.py)
 ├── requirements.txt   # Python dependencies
 ├── data/
 │   ├── roofing.csv    # Sample data for a roofing company
